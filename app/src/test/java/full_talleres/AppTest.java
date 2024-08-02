@@ -9,60 +9,59 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
 
     @Test void t1_conv_km(){
-        Taller1 classUnderTest = new Taller1();
-        assertTrue(classUnderTest.Convertir_km_seg(40).contains("40000.0 m/s - 1.44E8 m/h")
-        , "El resultado de la función, ingresando 40 km/seg, debe ser 40000.0 m/s - 1.44E8 m/h");
+        //Taller1 classUnderTest = new Taller1();
+        assertTrue(Taller1.Convertir_km_seg(40).contains("40000.0 m/s - 1.44E8 m/h"), 
+        "El resultado de la función, ingresando 40 km/seg, debe ser 40000.0 m/s - 1.44E8 m/h");
     }
 
     @Test void t1_cc_a_lt(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(3.5, classUnderTest.Convertir_cm_lt(3500), 
+        //Taller1 classUnderTest = new Taller1();
+        assertEquals(3.5, Taller1.Convertir_cm_lt(3500), 
         "El total de la conversión de 3500 cc es: 3.5");
-       
     }
 
     @Test void t1_conv_us_cops(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(190247910, classUnderTest.Convertir_us_cops(45623), 
+       //Taller1 classUnderTest = new Taller1();
+        assertEquals(190247910, Taller1.Convertir_us_cops(45623), 
         "El total de la conversión de US45623 es: 190247910 cops");
+        
+
     }
 
     @Test void t1_conv_cen_far(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(32.0, classUnderTest.Convertir_cent_far(0), 
+        //Taller1 classUnderTest = new Taller1();
+        assertEquals(32.0, Taller1.Convertir_cent_far(0), 
         "El total de la conversión de 0C es: 32.0 F");
     }
 
     @Test void t1_calcular_segs(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(90061, classUnderTest.Calcular_segs((short)1, (short)1, (short)1, (short)1), 
+        //Taller1 classUnderTest = new Taller1();
+        assertEquals(90061, Taller1.Calcular_segs((short)1, (short)1, (short)1, (short)1), 
         "El total de segundos esperado era de: 90061 para 1 dia, 1 hora, 1 minuto, 1 segundo");
+
     }
 
-
     @Test void t1_calcular_peso_carga(){
-        Taller1 classUnderTest = new Taller1();
-        assertTrue(classUnderTest.Calcular_peso_carga((float)47.5, (float)7.5).contains("40000.0 kilos - 40.0 toneladas")
+        //Taller1 classUnderTest = new Taller1();
+        assertTrue(Taller1.Calcular_peso_carga((float)47.5, (float)7.5).contains("40000.0 kilos - 40.0 toneladas")
         , "El resultado de la función, ingresando un peso total de 47.5 y un peso del camión de 7.5, debe ser 40000.0 kilos - 40.0 toneladas");
     }
 
     @Test void t1_calcular_horasxviaje(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(3.0, classUnderTest.Calcular_horasxviaje("Armenia", (short)285, (short)72), 
+        //Taller1 classUnderTest = new Taller1();
+        assertEquals(3.0, Taller1.Calcular_horasxviaje("Armenia", (short)285, (short)72), 
         "El total de horas esperado para una distancia de 285k a 72k/h es 3.0");
     }
 
     @Test void t1_calcular_comustible(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(14.337502, classUnderTest.Calcular_combustible(638, 312, 1243, 220), 
-        "El total de combustible en tonealdas esperado es: 14.337502 para los kms de las siguiente cuatro rutas: 638, 312, 1243, 220");
+        //Taller1 classUnderTest = new Taller1();
+        assertEquals(14.337502, Taller1.Calcular_combustible(638, 312, 1243, 220), 0.0001f,
+        "El total de combustible en toneladas esperado es: 14.337502 para los kms de las siguiente cuatro rutas: 638, 312, 1243, 220");
     }
-
     @Test void t1_calcular_peso_luna(){
-        Taller1 classUnderTest = new Taller1();
-        assertEquals(129.49201320219072, classUnderTest.Calcular_peso_luna((byte)80), 
+        //Taller1 classUnderTest = new Taller1();
+        assertEquals(129.49201320219072, Taller1.Calcular_peso_luna((byte)80), 
         "El peso en la luna esperado para 80kilos es de 129.49201320219072");
     }
-
 }
 
